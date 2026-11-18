@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÖTZI Tattoo | Custom Designs & Handmade · Cáceres</title>
+    <meta name="description" content="ÖTZI Tattoo en Cáceres (Calle Sánchez Manzano nº 9). Estudio de tatuajes artesanales, láminas flash y diseños custom desde 1999 por Nito y Croma Ballinoti.">
+    <meta name="theme-color" content="#63979a">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph / WhatsApp & Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="ÖTZI Tattoo Cáceres">
+    <meta property="og:title" content="ÖTZI Tattoo | Custom Designs & Handmade · Cáceres">
+    <meta property="og:description" content="Estudio de tatuajes en Calle Sánchez Manzano nº 9, Cáceres. Tatuando desde 1999: láminas hechas a mano, diseños a medida y todos los estilos.">
+    <meta property="og:image" content="img/laminas/retocada_14.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ÖTZI Tattoo | Custom Designs & Handmade · Cáceres">
+    <meta name="twitter:description" content="Estudio de tatuajes en Cáceres desde 1999. Explora nuestras láminas flash y pide tu cita.">
+    <meta name="twitter:image" content="img/laminas/retocada_14.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Tipografía retro cartelera mid-century + tipografía limpia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos clásicos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        otziTeal: '#63979a',
+                        otziTealDark: '#4d7a7d',
+                        otziCream: '#f5f0e1',
+                        otziCreamDark: '#e7dfc6',
+                        otziRed: '#e83820',
+                        otziRedDark: '#c42913',
+                        otziInk: '#111111',
+                    },
+                    fontFamily: {
+                        display: ['Oswald', 'Barlow Condensed', 'sans-serif'],
+                        condensed: ['Barlow Condensed', 'Oswald', 'sans-serif'],
+                        sans: ['Work Sans', 'sans-serif'],
+                    },
+                    borderWidth: {
+                        3: '3px',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estética retro cartelera fiel a la imagen: fondo azul cerceta (#63979a) con grano sutil */
+        body {
+            background-color: #63979a;
+            color: #111111;
+            font-family: 'Work Sans', sans-serif;
+            background-image: radial-gradient(rgba(17, 17, 17, 0.08) 1px, transparent 0);
+            background-size: 16px 16px;
+        }
+
+        /* Esquinas recortadas estilo etiqueta / cartel clásico */
+        .notched-box {
+            clip-path: polygon(
+                14px 0%, calc(100% - 14px) 0%,
+                100% 14px, 100% calc(100% - 14px),
+                calc(100% - 14px) 100%, 14px 100%,
+                0% calc(100% - 14px), 0% 14px
+            );
+        }
+
+        /* Tarjeta vintage con borde negro sólido y sombra dura */
+        .vintage-card {
+            border: 3px solid #111111;
+            box-shadow: 5px 5px 0px #111111;
+            transition: transform 0.16s ease, box-shadow 0.16s ease;
+        }
+        .vintage-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #111111;
+        }
+
+        /* Botones estilo cartel retro */
+        .btn-retro {
+            border: 3px solid #111111;
+            box-shadow: 3px 3px 0px #111111;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.14s ease;
+        }
+        .btn-retro:hover {
+            transform: translate(-1.5px, -1.5px);
+            box-shadow: 5px 5px 0px #111111;
+        }
+        .btn-retro:active {
+            transform: translate(1.5px, 1.5px);
+            box-shadow: 1.5px 1.5px 0px #111111;
+        }
+
+        /* Triple raya horizontal estilo logotipo ÖTZI */
+        .otzi-stripes-cream {
+            height: 13px;
+            background: repeating-linear-gradient(
+                to bottom,
+                #f5f0e1 0px,
+                #f5f0e1 2.5px,
+                transparent 2.5px,
+                transparent 5.5px
+            );
+        }
+        .otzi-stripes-red {
+            height: 13px;
+            background: repeating-linear-gradient(
+                to bottom,
+                #e83820 0px,
+                #e83820 2.5px,
+                transparent 2.5px,
+                transparent 5.5px
+            );
+        }
+
+        .title-shadow {
+            text-shadow: 2.5px 2.5px 0px #111111;
+        }
+
+        /* Animación de despliegue suave de paneles */
+        @keyframes panelReveal {
+            from {
+                opacity: 0;
+                transform: translateY(16px) scale(0.985);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .panel-animate {
+            animation: panelReveal 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-otziRed selection:text-otziCream">
+
+    <!-- 1. BARRA SUPERIOR MINIMALISTA: LOGO + BOTONES PRINCIPALES -->
+    <header class="bg-otziInk text-otziCream border-b-4 border-otziRed sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto px-3 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <!-- Botón volver a Portada -->
+            <button type="button" onclick="cerrarTodosLosPaneles()" class="flex items-center gap-2.5 group text-left focus:outline-none">
+                <span class="border-2 border-otziCream px-2.5 py-0.5 bg-otziTeal group-hover:bg-otziRed transition-colors">
+                    <span class="font-display font-bold text-lg sm:text-xl tracking-wider text-otziCream title-shadow">
+                        TATTOO ÖTZI
+                    </span>
+                </span>
+                <span class="hidden lg:inline-block font-condensed uppercase tracking-widest text-xs text-otziCream/75">
+                    Custom Designs &bull; Handmade
+                </span>
+            </button>
+
+            <!-- Navegación principal -->
+            <nav aria-label="Secciones del estudio" class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 w-full sm:w-auto">
+                <button type="button" data-nav="laminas" onclick="abrirPanel('laminas')"
+                        class="nav-trigger px-3 sm:px-4 py-1.5 rounded font-display text-sm sm:text-base font-bold uppercase tracking-widest border-2 border-transparent hover:border-otziCream hover:text-otziRed transition">
+                    Láminas
+                </button>
+                <a href="https://www.instagram.com/otzitattoo.cc" target="_blank" rel="noopener noreferrer"
+                   class="px-3 sm:px-4 py-1.5 rounded font-display text-sm sm:text-base font-bold uppercase tracking-widest border-2 border-transparent hover:border-otziCream hover:text-otziRed transition inline-flex items-center gap-1.5">
+                    Tatuajes <i class="fa-brands fa-instagram text-xs text-otziRed"></i>
+                </a>
+                <button type="button" data-nav="tatuadores" onclick="abrirPanel('tatuadores')"
+                        class="nav-trigger px-3 sm:px-4 py-1.5 rounded font-display text-sm sm:text-base font-bold uppercase tracking-widest border-2 border-transparent hover:border-otziCream hover:text-otziRed transition">
+                    Tatuadores
+                </button>
+                <button type="button" data-nav="estudio" onclick="abrirPanel('estudio')"
+                        class="nav-trigger px-3 sm:px-4 py-1.5 rounded font-display text-sm sm:text-base font-bold uppercase tracking-widest border-2 border-transparent hover:border-otziCream hover:text-otziRed transition">
+                    Estudio
+                </button>
+                <button type="button" data-nav="faq" onclick="abrirPanel('faq')"
+                        class="nav-trigger px-3 sm:px-4 py-1.5 rounded font-display text-sm sm:text-base font-bold uppercase tracking-widest border-2 border-transparent hover:border-otziCream hover:text-otziRed transition">
+                    Preguntas Frecuentes
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. PORTADA CENTRAL LIMPIA (ÚNICA VISTA POR DEFECTO, SIN SCROLL LARGO) -->
+    <main class="flex-1 flex flex-col items-center justify-center px-4 py-4 sm:py-6">
+        <div class="w-full max-w-3xl mx-auto text-center">
+
+            <!-- Logotipo vectorial fiel a la imagen -->
+            <div class="w-full max-w-[660px] mx-auto select-none">
+                <svg viewBox="0 0 860 435" class="w-full h-auto drop-shadow-[0_10px_14px_rgba(17,17,17,0.32)]" role="img" aria-label="Logotipo Tattoo Otzi Custom Designs Handmade">
+                    <defs>
+                        <!-- Degradado de pasos duros exacto a la tipografía de la imagen: Crema arriba y 3 franjas rojas abajo -->
+                        <linearGradient id="otziVintageLetters" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#f5f0e1"/>
+                            <stop offset="65%" stop-color="#f5f0e1"/>
+                            <stop offset="65.1%" stop-color="#e83820"/>
+                            <stop offset="71.5%" stop-color="#e83820"/>
+                            <stop offset="71.6%" stop-color="#f5f0e1"/>
+                            <stop offset="76.5%" stop-color="#f5f0e1"/>
+                            <stop offset="76.6%" stop-color="#e83820"/>
+                            <stop offset="82.5%" stop-color="#e83820"/>
+                            <stop offset="82.6%" stop-color="#f5f0e1"/>
+                            <stop offset="87%" stop-color="#f5f0e1"/>
+                            <stop offset="87.1%" stop-color="#e83820"/>
+                            <stop offset="100%" stop-color="#e83820"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Marco negro grueso con esquinas cóncavas/recortadas -->
+                    <path d="M 132 45
+                             L 728 45
+                             A 56 56 0 0 0 784 101
+                             L 784 334
+                             A 56 56 0 0 0 728 390
+                             L 132 390
+                             A 56 56 0 0 0 76 334
+                             L 76 101
+                             A 56 56 0 0 0 132 45 Z"
+                          fill="#63979a" stroke="#111111" stroke-width="12"/>
+
+                    <!-- Grupo inclinado (-10 grados) idéntico al emblema -->
+                    <g transform="rotate(-10, 430, 218)">
+                        <!-- 3 líneas horizontales crema a la izquierda -->
+                        <line x1="12" y1="250" x2="138" y2="250" stroke="#f5f0e1" stroke-width="5.5"/>
+                        <line x1="12" y1="263" x2="138" y2="263" stroke="#f5f0e1" stroke-width="5.5"/>
+                        <line x1="12" y1="276" x2="138" y2="276" stroke="#f5f0e1" stroke-width="5.5"/>
+
+                        <!-- CUSTOM DESIGNS -->
+                        <text x="148" y="274" font-family="'Oswald', sans-serif" font-weight="700" font-size="33" fill="#f5f0e1" letter-spacing="1.5">
+                            CUSTOM DESIGNS
+                        </text>
+
+                        <!-- Sombra negra de TATTOO -->
+                        <text x="120" y="174" font-family="'Oswald', sans-serif" font-weight="700" font-size="122" fill="#111111" letter-spacing="8">
+                            TATTOO
+                        </text>
+                        <!-- TATTOO principal -->
+                        <text x="127" y="169" font-family="'Oswald', sans-serif" font-weight="700" font-size="122" fill="url(#otziVintageLetters)" letter-spacing="8">
+                            TATTOO
+                        </text>
+
+                        <!-- Sombra negra de OTZI -->
+                        <text x="396" y="304" font-family="'Oswald', sans-serif" font-weight="700" font-size="124" fill="#111111" letter-spacing="10">
+                            OTZI
+                        </text>
+                        <!-- OTZI principal -->
+                        <text x="403" y="299" font-family="'Oswald', sans-serif" font-weight="700" font-size="124" fill="url(#otziVintageLetters)" letter-spacing="10">
+                            OTZI
+                        </text>
+
+                        <!-- HANDMADE -->
+                        <text x="502" y="358" font-family="'Oswald', sans-serif" font-weight="700" font-size="33" fill="#111111" letter-spacing="1.5">
+                            HANDMADE
+                        </text>
+
+                        <!-- 3 líneas horizontales crema a la derecha -->
+                        <line x1="668" y1="336" x2="835" y2="336" stroke="#f5f0e1" stroke-width="5.5"/>
+                        <line x1="668" y1="349" x2="835" y2="349" stroke="#f5f0e1" stroke-width="5.5"/>
+                        <line x1="668" y1="362" x2="835" y2="362" stroke="#f5f0e1" stroke-width="5.5"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Subtítulo minimalista -->
+            <p class="font-display uppercase tracking-widest text-xs sm:text-sm text-otziCream title-shadow mt-1">
+                Estudio de Tatuajes en Cáceres &bull; Pulsa cualquier apartado para explorar
+            </p>
+        </div>
+    </main>
+
+    <!-- 3. PIE COMPACTO DE PORTADA ESTILO SPIDER MURPHY'S TATTOO (DIRECCIÓN, TELÉFONO, CITA Y REDES) -->
+    <footer class="bg-otziCream border-t-4 border-otziInk shadow-[0_-4px_12px_rgba(17,17,17,0.18)]">
+        <div class="max-w-6xl mx-auto px-3 sm:px-6 py-3.5 sm:py-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-stretch">
+
+                <!-- Bloque 1: Dirección + Botón Ubicación -->
+                <div class="bg-white border-3 border-otziInk rounded-lg p-3 flex flex-col justify-between shadow-[3px_3px_0px_#111111]">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-7 h-7 rounded bg-otziInk text-otziRed flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-location-dot text-sm"></i>
+                        </span>
+                        <div class="leading-tight">
+                            <span class="block text-[10px] font-display uppercase tracking-widest text-otziInk/70 font-bold">Dirección</span>
+                            <span class="font-bold text-xs sm:text-sm text-otziInk">Sánchez Manzano nº 9, Cáceres</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Sanchez+Manzano+9,+Caceres,+Spain" target="_blank" rel="noopener noreferrer"
+                       class="btn-retro w-full bg-otziTeal text-otziCream py-1.5 px-3 rounded text-xs sm:text-sm font-bold inline-flex items-center justify-center gap-1.5 hover:bg-otziRed">
+                        <i class="fa-solid fa-map-location-dot"></i> Ubicación
+                    </a>
+                </div>
+
+                <!-- Bloque 2: Teléfono + Botón Mensaje a WhatsApp -->
+                <div class="bg-white border-3 border-otziInk rounded-lg p-3 flex flex-col justify-between shadow-[3px_3px_0px_#111111]">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-7 h-7 rounded bg-otziInk text-otziRed flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-phone text-sm"></i>
+                        </span>
+                        <div class="leading-tight">
+                            <span class="block text-[10px] font-display uppercase tracking-widest text-otziInk/70 font-bold">Teléfono</span>
+                            <a href="tel:+34722611224" class="font-display font-bold text-base sm:text-lg tracking-wider text-otziInk hover:text-otziRed transition">
+                                722 611 224
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34722611224?text=Hola%20%C3%96TZI%20Tattoo,%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20o%20cita%20para%20un%20tatuaje." target="_blank" rel="noopener noreferrer"
+                       class="btn-retro w-full bg-[#25D366] text-otziInk py-1.5 px-3 rounded text-xs sm:text-sm font-bold inline-flex items-center justify-center gap-1.5">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Mensaje a WhatsApp
+                    </a>
+                </div>
+
+                <!-- Bloque 3: Botón Destacado Pedir Cita / Formulario -->
+                <div class="bg-otziTeal border-3 border-otziInk rounded-lg p-3 flex flex-col justify-between shadow-[3px_3px_0px_#111111]">
+                    <div class="leading-tight mb-2">
+                        <span class="block text-[10px] font-display uppercase tracking-widest text-otziCream/90 font-bold">Reserva tu sesión</span>
+                        <span class="font-display font-bold text-sm sm:text-base uppercase text-otziCream title-shadow">
+                            ¿Tienes una idea en mente?
+                        </span>
+                    </div>
+                    <button type="button" onclick="abrirPanel('cita')"
+                            class="btn-retro w-full bg-otziRed text-otziCream py-2 px-3 rounded text-xs sm:text-sm font-bold inline-flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-calendar-check"></i> Pedir Cita / Formulario
+                    </button>
+                </div>
+
+                <!-- Bloque 4: Redes Sociales (Instagram y Facebook) -->
+                <div class="bg-otziInk text-otziCream border-3 border-otziInk rounded-lg p-3 flex flex-col justify-between shadow-[3px_3px_0px_#e83820]">
+                    <div class="text-[11px] leading-snug mb-2 space-y-0.5">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-otziCream/75"><i class="fa-brands fa-instagram text-otziRed mr-1"></i>Instagram:</span>
+                            <span class="font-bold truncate">otzitattoo.cc</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-otziCream/75"><i class="fa-brands fa-facebook text-otziRed mr-1"></i>Facebook:</span>
+                            <span class="font-bold truncate">Ötzi Tattoo Cáceres</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-1.5">
+                        <a href="https://www.instagram.com/otzitattoo.cc" target="_blank" rel="noopener noreferrer"
+                           class="btn-retro bg-otziCream text-otziInk py-1.5 px-2 rounded text-[11px] sm:text-xs font-bold inline-flex items-center justify-center gap-1 hover:bg-otziRed hover:text-otziCream">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/otzitattoocaceres/" target="_blank" rel="noopener noreferrer"
+                           class="btn-retro bg-otziTeal text-otziCream py-1.5 px-2 rounded text-[11px] sm:text-xs font-bold inline-flex items-center justify-center gap-1 hover:bg-otziRed">
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- CONTENEDOR DESPLEGABLE (OVERFLOW MODAL) PARA LOS PANELES INTERACTIVOS -->
+    <!-- ===================================================================== -->
+    <div id="overlayBackdrop" class="fixed inset-0 z-40 hidden bg-otziInk/80 backdrop-blur-xs overflow-y-auto p-3 sm:p-6" onclick="cerrarSiClicFuera(event)">
+        <div class="min-h-full flex items-center justify-center">
+
+            <!-- VENTANA PRINCIPAL DEL PANEL ACTIVO -->
+            <div id="panelContainer" class="panel-animate relative w-full max-w-5xl bg-otziCream border-4 border-otziInk rounded-xl shadow-[10px_10px_0px_#e83820] overflow-hidden my-4">
+
+                <!-- Cabecera fija de cualquier panel desplegado con botón Volver a Portada -->
+                <div class="bg-otziInk text-otziCream px-4 sm:px-6 py-3.5 border-b-4 border-otziRed flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <span id="panelBadge" class="bg-otziRed text-otziCream font-display uppercase text-xs font-bold px-2.5 py-0.5 rounded">
+                            ÖTZI TATTOO
+                        </span>
+                        <h2 id="panelHeading" class="font-display text-2xl sm:text-3xl font-bold uppercase tracking-wider text-otziCream">
+                            Sección
+                        </h2>
+                    </div>
+                    <button type="button" onclick="cerrarTodosLosPaneles()"
+                            class="btn-retro bg-otziCream text-otziInk px-3.5 py-1.5 rounded text-xs sm:text-sm font-bold inline-flex items-center gap-1.5 hover:bg-otziRed hover:text-otziCream">
+                        <i class="fa-solid fa-xmark"></i> Cerrar / Volver a Portada
+                    </button>
+                </div>
+
+                <!-- CUERPO DEL PANEL (Se intercambia según el botón pulsado) -->
+                <div class="p-4 sm:p-7 max-h-[80vh] overflow-y-auto">
+
+                    <!-- PANEL A: LÁMINAS -->
+                    <section id="panel-laminas" class="panel-view hidden">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-6 border-b-3 border-otziInk">
+                            <div>
+                                <p class="text-sm text-otziInk/85">
+                                    Láminas originales pintadas a mano en nuestro estudio. Pulsa cualquier imagen para verla en grande o <strong>"Pedir cita con esta lámina"</strong> para consultarla.
+                                </p>
+                            </div>
+                            <!-- Filtros por estilo -->
+                            <div class="flex flex-wrap gap-2 shrink-0" id="flashFilters">
+                                <button type="button" data-filter="all" class="filter-btn btn-retro bg-otziInk text-otziCream px-3 py-1.5 rounded text-xs font-bold">Todas</button>
+                                <button type="button" data-filter="japones" class="filter-btn btn-retro bg-white text-otziInk px-3 py-1.5 rounded text-xs font-bold">Japonés</button>
+                                <button type="button" data-filter="tradicional" class="filter-btn btn-retro bg-white text-otziInk px-3 py-1.5 rounded text-xs font-bold">Tradicional</button>
+                                <button type="button" data-filter="blackwork" class="filter-btn btn-retro bg-white text-otziInk px-3 py-1.5 rounded text-xs font-bold">Blanco y Negro</button>
+                            </div>
+                        </div>
+
+                        <div id="laminasGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Generado por JS -->
+                        </div>
+                    </section>
+
+                    <!-- PANEL C: TATUADORES -->
+                    <section id="panel-tatuadores" class="panel-view hidden">
+                        <p class="text-sm text-otziInk/85 pb-5 mb-6 border-b-3 border-otziInk">
+                            Conoce a los artistas de ÖTZI Tattoo. Selecciona a tu tatuador para abrir directamente el formulario con su agenda asignada.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                            <!-- Artista Principal: Nito -->
+                            <article class="vintage-card bg-otziTeal text-otziCream rounded-xl overflow-hidden flex flex-col justify-between">
+                                <div>
+                                    <div class="bg-otziInk px-4 py-2 flex items-center justify-between gap-2">
+                                        <span class="font-display uppercase text-xs font-bold text-otziRed tracking-wider">Fundador &amp; Tatuador Principal</span>
+                                        <span class="text-[11px] text-otziCream/75">Desde 1999</span>
+                                    </div>
+                                    <div class="p-5 text-center">
+                                        <div class="w-24 h-24 mx-auto mb-3 bg-otziCream border-3 border-otziInk rounded-full flex items-center justify-center shadow-[3px_3px_0px_#111111]">
+                                            <svg viewBox="0 0 100 100" class="w-16 h-16">
+                                                <circle cx="50" cy="38" r="21" fill="#111111"/>
+                                                <path d="M18 90 C18 66, 82 66, 82 90" fill="#111111"/>
+                                                <rect x="33" y="13" width="34" height="8" rx="2" fill="#e83820"/>
+                                                <path d="M36 37 L45 37 M55 37 L64 37" stroke="#f5f0e1" stroke-width="3" stroke-linecap="round"/>
+                                                <path d="M40 49 Q50 56 60 49" stroke="#e83820" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <h3 class="font-display text-3xl font-bold uppercase text-otziCream title-shadow">Nito</h3>
+                                        <p class="font-condensed uppercase text-xs font-bold tracking-widest text-otziCream/90 mb-3">Dueño del Estudio &bull; Todos los Estilos</p>
+                                        <div class="bg-otziCream text-otziInk p-4 rounded-lg border-2 border-otziInk text-left text-xs sm:text-sm space-y-2 leading-relaxed">
+                                            <p>
+                                                Fundador y propietario de <strong>ÖTZI Tattoo</strong>, tatuando de forma ininterrumpida desde <strong>1999</strong>.
+                                            </p>
+                                            <p>
+                                                Con más de dos décadas de oficio y dominio de <strong>todos los estilos</strong> —tradicional, realismo, blackwork, japonés, neotradicional o diseños custom—, garantiza técnica sólida, asesoramiento honesto y piezas pensadas para durar toda la vida.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-5 pb-5">
+                                    <button type="button" onclick="citarConTatuador('Nito (Fundador · Todos los estilos)')" class="btn-retro w-full bg-otziRed text-otziCream py-2.5 px-4 rounded-lg font-bold text-sm">
+                                        <i class="fa-solid fa-calendar-check mr-1.5"></i> Citarse con Nito
+                                    </button>
+                                </div>
+                            </article>
+
+                            <!-- Artista Secundario: Croma Ballinoti -->
+                            <article class="vintage-card bg-otziTeal text-otziCream rounded-xl overflow-hidden flex flex-col justify-between">
+                                <div>
+                                    <div class="bg-otziInk px-4 py-2 flex items-center justify-between gap-2">
+                                        <span class="font-display uppercase text-xs font-bold text-otziRed tracking-wider">Blackwork &amp; Abstracto</span>
+                                        <span class="text-[11px] text-otziCream/75">Artista Residente</span>
+                                    </div>
+                                    <div class="p-5 text-center">
+                                        <div class="w-24 h-24 mx-auto mb-3 bg-otziCream border-3 border-otziInk rounded-full flex items-center justify-center shadow-[3px_3px_0px_#111111]">
+                                            <svg viewBox="0 0 100 100" class="w-16 h-16">
+                                                <circle cx="50" cy="38" r="21" fill="#111111"/>
+                                                <path d="M20 90 C20 66, 80 66, 80 90" fill="#111111"/>
+                                                <path d="M27 33 Q50 11 73 33" stroke="#e83820" stroke-width="4" fill="none"/>
+                                                <circle cx="42" cy="38" r="3" fill="#f5f0e1"/>
+                                                <circle cx="58" cy="38" r="3" fill="#f5f0e1"/>
+                                                <path d="M44 49 L56 49" stroke="#e83820" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <h3 class="font-display text-3xl font-bold uppercase text-otziCream title-shadow">Croma Ballinoti</h3>
+                                        <p class="font-condensed uppercase text-xs font-bold tracking-widest text-otziCream/90 mb-3">Blackwork &bull; Ornamental &bull; Abstracto</p>
+                                        <div class="bg-otziCream text-otziInk p-4 rounded-lg border-2 border-otziInk text-left text-xs sm:text-sm space-y-2 leading-relaxed">
+                                            <p>
+                                                Especializado en <strong>blackwork, ornamental y trazo abstracto</strong>, con fuerte presencia de tinta negra, geometría y composiciones únicas adaptadas a la anatomía de cada cuerpo.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-5 pb-5">
+                                    <button type="button" onclick="citarConTatuador('Croma Ballinoti (Blackwork & Abstracto)')" class="btn-retro w-full bg-otziRed text-otziCream py-2.5 px-4 rounded-lg font-bold text-sm">
+                                        <i class="fa-solid fa-calendar-check mr-1.5"></i> Citarse con Croma
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- PANEL D: ESTUDIO -->
+                    <section id="panel-estudio" class="panel-view hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                            <div class="space-y-4">
+                                <div class="otzi-stripes-red w-36"></div>
+                                <h3 class="font-display text-3xl uppercase font-bold text-otziInk">
+                                    Custom Designs &bull; Handmade
+                                </h3>
+                                <p class="text-sm leading-relaxed text-otziInk">
+                                    <strong>ÖTZI Tattoo</strong> es un estudio artesanal situado en <strong>Sánchez Manzano nº 9 (Cáceres)</strong>. Recuperamos el espíritu de las tiendas clásicas de tatuaje donde el dibujo hecho a mano, la honestidad en el consejo y la solidez técnica son la base de cada sesión.
+                                </p>
+                                <div class="bg-white border-3 border-otziInk rounded-lg p-4 space-y-2 text-sm">
+                                    <h4 class="font-display uppercase font-bold text-base flex items-center gap-2">
+                                        <i class="fa-solid fa-clock text-otziRed"></i> Horario y Atención
+                                    </h4>
+                                    <p><strong>Martes a Viernes:</strong> 11:00 – 14:00 y 17:00 – 21:00</p>
+                                    <p><strong>Sábados:</strong> 11:00 – 14:00 (tardes con cita previa)</p>
+                                    <p><strong>Lunes y Domingos:</strong> Cerrado</p>
+                                    <p><strong>Dirección:</strong> Calle Sánchez Manzano nº 9, Cáceres</p>
+                                </div>
+                                <div class="flex flex-wrap gap-3 pt-1">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Sanchez+Manzano+9,+Caceres,+Spain" target="_blank" rel="noopener noreferrer"
+                                       class="btn-retro bg-otziTeal text-otziCream px-4 py-2.5 rounded-lg text-sm font-bold inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-map-location-dot"></i> Ver Ubicación en Maps
+                                    </a>
+                                    <button type="button" onclick="abrirPanel('cita')"
+                                            class="btn-retro bg-otziRed text-otziCream px-4 py-2.5 rounded-lg text-sm font-bold inline-flex items-center gap-2">
+                                        <i class="fa-solid fa-calendar-check"></i> Pedir Cita
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-otziTeal text-otziCream p-4 rounded-lg border-3 border-otziInk shadow-[4px_4px_0px_#111111]">
+                                    <i class="fa-solid fa-pen-nib text-2xl text-otziRed mb-2"></i>
+                                    <h4 class="font-display text-lg uppercase font-bold">Diseño a Medida</h4>
+                                    <p class="text-xs text-otziCream/95 mt-1">Dibujamos tu idea desde cero adaptada a tu anatomía.</p>
+                                </div>
+                                <div class="bg-otziTeal text-otziCream p-4 rounded-lg border-3 border-otziInk shadow-[4px_4px_0px_#111111]">
+                                    <i class="fa-solid fa-shield-halved text-2xl text-otziRed mb-2"></i>
+                                    <h4 class="font-display text-lg uppercase font-bold">Higiene Certificada</h4>
+                                    <p class="text-xs text-otziCream/95 mt-1">Material 100% estéril y desechable bajo normativa sanitaria.</p>
+                                </div>
+                                <div class="bg-otziTeal text-otziCream p-4 rounded-lg border-3 border-otziInk shadow-[4px_4px_0px_#111111]">
+                                    <i class="fa-solid fa-palette text-2xl text-otziRed mb-2"></i>
+                                    <h4 class="font-display text-lg uppercase font-bold">Paredes de Flash</h4>
+                                    <p class="text-xs text-otziCream/95 mt-1">Láminas originales disponibles para tatuar en el estudio.</p>
+                                </div>
+                                <div class="bg-otziTeal text-otziCream p-4 rounded-lg border-3 border-otziInk shadow-[4px_4px_0px_#111111]">
+                                    <i class="fa-solid fa-comments text-2xl text-otziRed mb-2"></i>
+                                    <h4 class="font-display text-lg uppercase font-bold">Trato Cercano</h4>
+                                    <p class="text-xs text-otziCream/95 mt-1">Te asesoramos sobre tamaño, zona y envejecimiento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- PANEL E: FORMULARIO DE CITA / MENSAJE -->
+                    <section id="panel-cita" class="panel-view hidden">
+                        <p class="text-sm text-otziInk/85 pb-4 mb-5 border-b-3 border-otziInk">
+                            Rellena los datos de tu proyecto y envíalos directamente al estudio o por WhatsApp al <strong>722 611 224</strong>.
+                        </p>
+
+                        <form id="citaForm" class="space-y-4">
+                            <!-- Nombre y teléfono del cliente -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="clienteNombre" class="block font-display uppercase font-bold text-sm text-otziInk mb-1">
+                                        Nombre del cliente *
+                                    </label>
+                                    <input type="text" id="clienteNombre" required placeholder="Tu nombre completo"
+                                           class="w-full px-3.5 py-2.5 bg-white border-3 border-otziInk rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-otziRed">
+                                </div>
+                                <div>
+                                    <label for="clienteTelefono" class="block font-display uppercase font-bold text-sm text-otziInk mb-1">
+                                        Teléfono del cliente *
+                                    </label>
+                                    <input type="tel" id="clienteTelefono" required placeholder="Ej. 600 123 456"
+                                           class="w-full px-3.5 py-2.5 bg-white border-3 border-otziInk rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-otziRed">
+                                </div>
+                            </div>
+
+                            <!-- Tatuador que desea y Tatuaje que quiere -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="tatuadorDeseado" class="block font-display uppercase font-bold text-sm text-otziInk mb-1">
+                                        Tatuador que desea *
+                                    </label>
+                                    <select id="tatuadorDeseado"
+                                            class="w-full px-3.5 py-2.5 bg-white border-3 border-otziInk rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-otziRed">
+                                        <option value="Cualquiera / Sin preferencia">Cualquiera / Sin preferencia</option>
+                                        <option value="Nito (Fundador · Todos los estilos)">Nito (Fundador · Todos los estilos)</option>
+                                        <option value="Croma Ballinoti (Blackwork & Abstracto)">Croma Ballinoti (Blackwork &amp; Abstracto)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="tatuajeQuiere" class="block font-display uppercase font-bold text-sm text-otziInk mb-1">
+                                        Tatuaje que quiere *
+                                    </label>
+                                    <input type="text" id="tatuajeQuiere" required placeholder="Idea, título o lámina elegida"
+                                           class="w-full px-3.5 py-2.5 bg-white border-3 border-otziInk rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-otziRed">
+                                </div>
+                            </div>
+
+                            <!-- Apartado referente al Tattoo: Zona, Tamaño y Descripción -->
+                            <div class="bg-otziTeal/20 border-3 border-otziInk rounded-lg p-4 space-y-3">
+                                <h3 class="font-display uppercase font-bold text-base text-otziInk flex items-center gap-2">
+                                    <i class="fa-solid fa-ruler-combined text-otziRed"></i> Detalles del Tattoo (Zona, Tamaño y Descripción)
+                                </h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label for="tattooZona" class="block font-display uppercase font-bold text-xs text-otziInk mb-1">
+                                            Zona del cuerpo *
+                                        </label>
+                                        <input type="text" id="tattooZona" required placeholder="Ej. Antebrazo, hombro, gemelo..."
+                                               class="w-full px-3 py-2 bg-white border-2 border-otziInk rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-otziRed">
+                                    </div>
+                                    <div>
+                                        <label for="tattooTamano" class="block font-display uppercase font-bold text-xs text-otziInk mb-1">
+                                            Tamaño aproximado (en cm) *
+                                        </label>
+                                        <input type="text" id="tattooTamano" required placeholder="Ej. 15 x 10 cm"
+                                               class="w-full px-3 py-2 bg-white border-2 border-otziInk rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-otziRed">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="tattooDescripcion" class="block font-display uppercase font-bold text-xs text-otziInk mb-1">
+                                        Descripción del tatuaje *
+                                    </label>
+                                    <textarea id="tattooDescripcion" rows="3" required placeholder="Cuéntanos detalles sobre estilo, color o blanco y negro, referencias o disponibilidad..."
+                                              class="w-full px-3 py-2 bg-white border-2 border-otziInk rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-otziRed"></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-retro w-full bg-otziRed text-otziCream py-3.5 px-6 rounded-lg font-bold text-lg tracking-wider flex items-center justify-center gap-2.5">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje o Cita
+                            </button>
+                        </form>
+
+                        <!-- Confirmación con envío directo por WhatsApp -->
+                        <div id="formFeedback" class="hidden bg-otziTeal text-otziCream border-3 border-otziInk rounded-xl p-5 shadow-[5px_5px_0px_#111111]">
+                            <h4 class="font-display text-2xl uppercase font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check"></i> ¡Consulta Preparada!
+                            </h4>
+                            <p class="text-xs sm:text-sm mt-1">
+                                Pulsa el botón verde para enviarnos tu solicitud directamente por WhatsApp al <strong>722 611 224</strong>:
+                            </p>
+                            <pre id="feedbackSummary" class="font-sans text-xs sm:text-sm bg-otziCream text-otziInk p-3.5 rounded-lg border-2 border-otziInk my-3 whitespace-pre-wrap font-medium"></pre>
+                            <div class="flex flex-wrap gap-3">
+                                <a id="whatsappDirectSend" href="#" target="_blank" rel="noopener noreferrer"
+                                   class="btn-retro bg-[#25D366] text-otziInk px-4 py-2.5 rounded-lg font-bold text-sm inline-flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i> Enviar por WhatsApp ahora
+                                </a>
+                                <button type="button" onclick="resetearFormulario()" class="btn-retro bg-otziCream text-otziInk px-4 py-2.5 rounded-lg font-bold text-sm">
+                                    Nueva consulta
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- PANEL F: PREGUNTAS FRECUENTES (FAQ) -->
+                    <section id="panel-faq" class="panel-view hidden">
+                        <div class="pb-4 mb-5 border-b-3 border-otziInk flex flex-wrap items-center justify-between gap-3">
+                            <p class="text-sm text-otziInk/85">
+                                Resolvemos las dudas más habituales antes y después de tu sesión en <strong>ÖTZI Tattoo Cáceres</strong>. Pulsa cada pregunta para ver la respuesta.
+                            </p>
+                            <button type="button" onclick="abrirPanel('cita')" class="btn-retro bg-otziRed text-otziCream px-4 py-2 rounded text-xs sm:text-sm font-bold shrink-0">
+                                <i class="fa-solid fa-calendar-check mr-1"></i> Pedir Cita
+                            </button>
+                        </div>
+
+                        <div id="faqAccordion" class="space-y-3">
+                            <!-- Pregunta 1 -->
+                            <div class="vintage-card bg-white rounded-xl overflow-hidden">
+                                <button type="button" onclick="toggleFaqItem(this)" aria-expanded="true"
+                                        class="w-full px-4 py-3.5 bg-otziInk text-otziCream flex items-center justify-between gap-3 text-left">
+                                    <span class="font-display uppercase font-bold text-base sm:text-lg tracking-wide flex items-center gap-2.5">
+                                        <span class="bg-otziRed text-otziCream text-xs px-2 py-0.5 rounded">01</span>
+                                        ¿Cómo puedo pedir cita en el estudio?
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down faq-icon text-otziRed transition-transform duration-200 rotate-180"></i>
+                                </button>
+                                <div class="faq-answer px-4 py-3.5 text-sm text-otziInk leading-relaxed bg-white">
+                                    Puedes reservar tu sesión rellenando el <strong>Formulario de Cita</strong> de esta web, escribiéndonos por WhatsApp al <strong>722 611 224</strong> o pasándote directamente por el estudio en <strong>Calle Sánchez Manzano nº 9 (Cáceres)</strong>. Cuéntanos tu idea, la zona del cuerpo, el tamaño aproximado en centímetros y envíanos alguna imagen de referencia.
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 2 -->
+                            <div class="vintage-card bg-white rounded-xl overflow-hidden">
+                                <button type="button" onclick="toggleFaqItem(this)" aria-expanded="false"
+                                        class="w-full px-4 py-3.5 bg-otziInk text-otziCream flex items-center justify-between gap-3 text-left">
+                                    <span class="font-display uppercase font-bold text-base sm:text-lg tracking-wide flex items-center gap-2.5">
+                                        <span class="bg-otziRed text-otziCream text-xs px-2 py-0.5 rounded">02</span>
+                                        ¿Es necesario dejar un depósito o fianza para reservar?
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down faq-icon text-otziRed transition-transform duration-200"></i>
+                                </button>
+                                <div class="faq-answer hidden px-4 py-3.5 text-sm text-otziInk leading-relaxed bg-white">
+                                    Sí. Para bloquear tu fecha y hora en la agenda y comenzar a preparar tu diseño personalizado, solicitamos una <strong>fianza o depósito previo</strong> que se descontará íntegramente del precio total del tatuaje el día de la sesión. Si necesitas cambiar la fecha, avísanos con al menos <strong>48 horas de antelación</strong> para conservar tu depósito.
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 3 -->
+                            <div class="vintage-card bg-white rounded-xl overflow-hidden">
+                                <button type="button" onclick="toggleFaqItem(this)" aria-expanded="false"
+                                        class="w-full px-4 py-3.5 bg-otziInk text-otziCream flex items-center justify-between gap-3 text-left">
+                                    <span class="font-display uppercase font-bold text-base sm:text-lg tracking-wide flex items-center gap-2.5">
+                                        <span class="bg-otziRed text-otziCream text-xs px-2 py-0.5 rounded">03</span>
+                                        ¿Cómo debo preparar mi piel antes de venir a tatuarme?
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down faq-icon text-otziRed transition-transform duration-200"></i>
+                                </button>
+                                <div class="faq-answer hidden px-4 py-3.5 text-sm text-otziInk leading-relaxed bg-white">
+                                    Ven bien descansado y habiendo comido antes de tu cita. Hidrata la piel los días previos, evita tomar el sol en exceso para no llegar con la piel quemada o irritada y <strong>no consumas alcohol ni anticoagulantes</strong> durante las 24 horas anteriores. Usa ropa cómoda que deje fácil acceso a la zona a tatuar.
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 4 -->
+                            <div class="vintage-card bg-white rounded-xl overflow-hidden">
+                                <button type="button" onclick="toggleFaqItem(this)" aria-expanded="false"
+                                        class="w-full px-4 py-3.5 bg-otziInk text-otziCream flex items-center justify-between gap-3 text-left">
+                                    <span class="font-display uppercase font-bold text-base sm:text-lg tracking-wide flex items-center gap-2.5">
+                                        <span class="bg-otziRed text-otziCream text-xs px-2 py-0.5 rounded">04</span>
+                                        ¿Qué cuidados debo seguir después del tatuaje?
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down faq-icon text-otziRed transition-transform duration-200"></i>
+                                </button>
+                                <div class="faq-answer hidden px-4 py-3.5 text-sm text-otziInk leading-relaxed bg-white space-y-1.5">
+                                    <p>1. Retira el film protector pasadas <strong>2 a 4 horas</strong> (o sigue la pauta específica si llevas parche transpirable).</p>
+                                    <p>2. Lava suavemente con <strong>agua tibia y jabón neutro</strong> sin frotar y seca dando pequeños toques con papel de cocina limpio.</p>
+                                    <p>3. Aplica una <strong>capa muy fina de crema cicatrizante</strong> 2 o 3 veces al día durante unas 2 semanas.</p>
+                                    <p>4. Evita el sol directo, piscinas, playa, saunas y no rasques ni arranques las costras.</p>
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 5 -->
+                            <div class="vintage-card bg-white rounded-xl overflow-hidden">
+                                <button type="button" onclick="toggleFaqItem(this)" aria-expanded="false"
+                                        class="w-full px-4 py-3.5 bg-otziInk text-otziCream flex items-center justify-between gap-3 text-left">
+                                    <span class="font-display uppercase font-bold text-base sm:text-lg tracking-wide flex items-center gap-2.5">
+                                        <span class="bg-otziRed text-otziCream text-xs px-2 py-0.5 rounded">05</span>
+                                        ¿Cuál es la edad mínima para tatuarse?
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down faq-icon text-otziRed transition-transform duration-200"></i>
+                                </button>
+                                <div class="faq-answer hidden px-4 py-3.5 text-sm text-otziInk leading-relaxed bg-white">
+                                    La edad mínima general es de <strong>18 años</strong> presentando tu DNI o pasaporte en vigor. Para jóvenes de <strong>16 y 17 años</strong>, es imprescindible acudir al estudio acompañados por su padre, madre o tutor legal con ambos DNI y firmar el consentimiento informado presencialmente.
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 6 -->
+                            <div class="vintage-card bg-white rounded-xl overflow-hidden">
+                                <button type="button" onclick="toggleFaqItem(this)" aria-expanded="false"
+                                        class="w-full px-4 py-3.5 bg-otziInk text-otziCream flex items-center justify-between gap-3 text-left">
+                                    <span class="font-display uppercase font-bold text-base sm:text-lg tracking-wide flex items-center gap-2.5">
+                                        <span class="bg-otziRed text-otziCream text-xs px-2 py-0.5 rounded">06</span>
+                                        ¿Qué métodos de pago aceptáis y cuál es el precio mínimo?
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down faq-icon text-otziRed transition-transform duration-200"></i>
+                                </button>
+                                <div class="faq-answer hidden px-4 py-3.5 text-sm text-otziInk leading-relaxed bg-white">
+                                    Aceptamos pago en <strong>efectivo y tarjeta</strong> en el estudio. El presupuesto de cada pieza depende del tamaño, la complejidad y la zona del cuerpo; escríbenos con tu idea y te daremos una valoración exacta sin compromiso.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Banner inferior de ayuda rápida por WhatsApp -->
+                        <div class="mt-6 bg-otziTeal text-otziCream border-3 border-otziInk rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[4px_4px_0px_#111111]">
+                            <p class="font-display uppercase font-bold text-sm sm:text-base tracking-wide text-center sm:text-left">
+                                ¿Tienes otra duda sobre tu proyecto? Consúltanos directamente
+                            </p>
+                            <a href="https://wa.me/34722611224?text=Hola%20%C3%96TZI%20Tattoo,%20tengo%20una%20consulta%20sobre%20un%20tatuaje." target="_blank" rel="noopener noreferrer"
+                               class="btn-retro bg-[#25D366] text-otziInk px-4 py-2 rounded-lg text-xs sm:text-sm font-bold inline-flex items-center gap-2 shrink-0">
+                                <i class="fa-brands fa-whatsapp text-base"></i> Preguntar por WhatsApp
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX DE AMPLIACIÓN PARA LÁMINAS -->
+    <div id="zoomModal" class="fixed inset-0 z-50 hidden bg-otziInk/85 backdrop-blur-xs overflow-y-auto p-3 sm:p-5" role="dialog" aria-modal="true" aria-labelledby="zoomTitle" onclick="if (event.target === this || event.target === this.firstElementChild) cerrarZoom()">
+        <div class="min-h-full flex items-center justify-center">
+            <div class="panel-animate relative w-full max-w-3xl bg-otziCream border-4 border-otziInk rounded-xl shadow-[8px_8px_0px_#e83820] overflow-hidden my-4">
+                <div class="bg-otziInk text-otziCream px-4 sm:px-5 py-3 border-b-4 border-otziRed flex items-center justify-between gap-3">
+                    <h3 id="zoomTitle" class="font-display text-xl sm:text-2xl font-bold uppercase tracking-wider text-otziCream">
+                        Lámina Flash
+                    </h3>
+                    <button type="button" onclick="cerrarZoom()" aria-label="Cerrar ampliación"
+                            class="btn-retro bg-otziCream text-otziInk px-3 py-1 rounded text-xs font-bold inline-flex items-center gap-1 hover:bg-otziRed hover:text-otziCream">
+                        <i class="fa-solid fa-xmark"></i> Cerrar
+                    </button>
+                </div>
+                <div class="p-4 sm:p-6 text-center space-y-4">
+                    <div class="bg-otziInk p-2.5 sm:p-3.5 rounded-xl">
+                        <div class="bg-otziCreamDark rounded-lg p-2 flex items-center justify-center">
+                            <img id="zoomImg" src="" alt="" class="max-h-[65vh] w-auto max-w-full object-contain rounded">
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p id="zoomMeta" class="font-display uppercase text-xs sm:text-sm font-bold tracking-wider text-otziRed"></p>
+                        <p id="zoomDesc" class="text-sm text-otziInk/85 leading-relaxed"></p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
+                        <button type="button" id="zoomCitaBtn" class="btn-retro bg-otziRed text-otziCream px-5 py-2.5 rounded-lg text-sm font-bold inline-flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-check"></i> Pedir cita con esta lámina
+                        </button>
+                        <button type="button" onclick="cerrarZoom()" class="btn-retro bg-white text-otziInk px-4 py-2.5 rounded-lg text-sm font-bold">
+                            Volver a láminas
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LÓGICA DE NAVEGACIÓN POR PANELES Y DATOS -->
+    <script>
+        const overlayBackdrop = document.getElementById('overlayBackdrop');
+        const panelHeading = document.getElementById('panelHeading');
+        const panelBadge = document.getElementById('panelBadge');
+        const panelViews = document.querySelectorAll('.panel-view');
+        const navTriggers = document.querySelectorAll('.nav-trigger');
+
+        const panelConfig = {
+            laminas: { titulo: 'Láminas Flash', badge: 'Handmade · Disponibles' },
+            tatuadores: { titulo: 'Tatuadores', badge: 'Artistas Residentes' },
+            estudio: { titulo: 'El Estudio', badge: 'Sánchez Manzano nº 9' },
+            cita: { titulo: 'Pedir Cita / Mensaje', badge: 'Reserva tu Sesión' },
+            faq: { titulo: 'Preguntas Frecuentes', badge: 'Dudas & Cuidados' }
+        };
+
+        function toggleFaqItem(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            button.setAttribute('aria-expanded', String(!isExpanded));
+            answer.classList.toggle('hidden', isExpanded);
+            if (icon) {
+                icon.classList.toggle('rotate-180', !isExpanded);
+            }
+        }
+
+        function abrirPanel(nombrePanel) {
+            const config = panelConfig[nombrePanel];
+            if (!config) return;
+
+            panelHeading.textContent = config.titulo;
+            panelBadge.textContent = config.badge;
+
+            panelViews.forEach(view => view.classList.add('hidden'));
+            const targetView = document.getElementById(`panel-${nombrePanel}`);
+            if (targetView) targetView.classList.remove('hidden');
+
+            // Resaltar botón activo en la barra superior
+            navTriggers.forEach(btn => {
+                if (btn.dataset.nav === nombrePanel) {
+                    btn.classList.add('bg-otziRed', 'text-otziCream', 'border-otziCream');
+                } else {
+                    btn.classList.remove('bg-otziRed', 'text-otziCream', 'border-otziCream');
+                }
+            });
+
+            overlayBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function cerrarTodosLosPaneles() {
+            overlayBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            navTriggers.forEach(btn => btn.classList.remove('bg-otziRed', 'text-otziCream', 'border-otziCream'));
+        }
+
+        function cerrarSiClicFuera(event) {
+            if (event.target === overlayBackdrop || event.target === overlayBackdrop.firstElementChild) {
+                cerrarTodosLosPaneles();
+            }
+        }
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (!document.getElementById('zoomModal').classList.contains('hidden')) {
+                    cerrarZoom();
+                } else if (!overlayBackdrop.classList.contains('hidden')) {
+                    cerrarTodosLosPaneles();
+                }
+            }
+        });
+
+        // Catálogo real de Láminas retocadas
+        const laminasData = [
+            {
+                id: 'LAM-01',
+                titulo: 'Bodysuit Grulla y Cerezos',
+                estilo: 'japones',
+                estiloLabel: 'Japonés',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Composición tradicional japonesa con grulla en vuelo, flores de cerezo y fondo de nubes y viento.',
+                imagen: 'img/laminas/retocada_3.jpg'
+            },
+            {
+                id: 'LAM-02',
+                titulo: 'Bodysuit Tigre y Bambú',
+                estilo: 'japones',
+                estiloLabel: 'Japonés',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Tigre japonés descendiendo entre nubes y cañas de bambú con sombreado clásico.',
+                imagen: 'img/laminas/retocada_4.jpg'
+            },
+            {
+                id: 'LAM-03',
+                titulo: 'Bodysuit Kitsune y Crisantemos',
+                estilo: 'japones',
+                estiloLabel: 'Japonés',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Zorro blanco kitsune con llamas rojas y crisantemos sobre fondo tradicional japonés.',
+                imagen: 'img/laminas/retocada_6.jpg'
+            },
+            {
+                id: 'LAM-04',
+                titulo: 'Bodysuit Gallo y Flores',
+                estilo: 'japones',
+                estiloLabel: 'Japonés',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Gallo de pelea en rojo y azul rodeado de flores, espirales de viento y nubes.',
+                imagen: 'img/laminas/retocada_7.jpg'
+            },
+            {
+                id: 'LAM-05',
+                titulo: 'Grullas en Blanco y Negro',
+                estilo: 'blackwork',
+                estiloLabel: 'Blanco y Negro',
+                artista: 'Cualquiera / Sin preferencia',
+                descripcion: 'Pareja de grullas en tinta negra y sombreado sólido, listas para tatuar individualmente o en pareja.',
+                imagen: 'img/laminas/retocada_11.jpg'
+            },
+            {
+                id: 'LAM-06',
+                titulo: 'Bulldogs Tradicionales',
+                estilo: 'tradicional',
+                estiloLabel: 'Tradicional',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Lámina old school con siete diseños de bulldogs clásicos enmarcados con alambre de espino y cadenas.',
+                imagen: 'img/laminas/retocada_12.jpg'
+            },
+            {
+                id: 'LAM-07',
+                titulo: 'Clásicos Old School',
+                estilo: 'tradicional',
+                estiloLabel: 'Tradicional',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Lámina vintage pintada a mano con enfermera clásica, rosa tradicional, sirena y perfil nativo con luna.',
+                imagen: 'img/laminas/retocada_13.jpg'
+            },
+            {
+                id: 'LAM-08',
+                titulo: 'Daga, Corazones y Mariposa Calavera',
+                estilo: 'tradicional',
+                estiloLabel: 'Tradicional',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Seis piezas tradicionales: daga, corazón con manos, serpiente, corazón en llamas, mariposa calavera y querubín.',
+                imagen: 'img/laminas/retocada_14.jpg'
+            },
+            {
+                id: 'LAM-09',
+                titulo: 'Grulla Japonesa de Corona Roja',
+                estilo: 'japones',
+                estiloLabel: 'Japonés',
+                artista: 'Nito (Fundador · Todos los estilos)',
+                descripcion: 'Grulla tradicional japonesa en vuelo sobre papel envejecido, con acentos en rojo y negro sólido.',
+                imagen: 'img/laminas/retocada_16.jpg'
+            }
+        ];
+
+        // Renderizar Láminas
+        const laminasGrid = document.getElementById('laminasGrid');
+        function renderLaminas(filtro = 'all') {
+            laminasGrid.innerHTML = '';
+            laminasData
+                .filter(item => filtro === 'all' || item.estilo === filtro)
+                .forEach(lamina => {
+                    const card = document.createElement('article');
+                    card.className = 'vintage-card bg-white rounded-xl overflow-hidden flex flex-col justify-between';
+                    card.innerHTML = `
+                        <div>
+                            <div class="bg-otziInk text-otziCream px-3.5 py-2 flex items-center justify-between text-xs">
+                                <span class="font-display font-bold tracking-widest uppercase">${lamina.id} &bull; ${lamina.estiloLabel}</span>
+                                <span class="bg-otziTeal text-otziCream px-2 py-0.5 rounded font-display font-bold uppercase">Handmade</span>
+                            </div>
+                            <button type="button" onclick="abrirZoomLamina('${lamina.id}')" class="w-full p-3 bg-otziCream/60 border-b-2 border-otziInk group relative block focus:outline-none">
+                                <div class="h-56 w-full flex items-center justify-center overflow-hidden rounded bg-otziCreamDark/60 p-1.5">
+                                    <img src="${lamina.imagen}" alt="${lamina.titulo}" loading="lazy"
+                                         class="max-h-full max-w-full object-contain rounded transition-transform duration-200 group-hover:scale-105">
+                                </div>
+                                <span class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-otziInk/90 text-otziCream flex items-center justify-center shadow group-hover:bg-otziRed transition" title="Ampliar lámina">
+                                    <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                                </span>
+                            </button>
+                            <div class="p-4">
+                                <h3 class="font-display text-xl font-bold uppercase text-otziInk">${lamina.titulo}</h3>
+                                <p class="text-xs text-otziInk/80 mt-1 leading-relaxed">${lamina.descripcion}</p>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <button type="button" onclick="reservarLamina('${lamina.id}')" class="btn-retro w-full bg-otziRed text-otziCream py-2.5 px-3 rounded-lg font-bold text-xs sm:text-sm">
+                                Pedir cita con esta lámina
+                            </button>
+                        </div>
+                    `;
+                    laminasGrid.appendChild(card);
+                });
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-otziInk', 'text-otziCream');
+                    b.classList.add('bg-white', 'text-otziInk');
+                });
+                btn.classList.remove('bg-white', 'text-otziInk');
+                btn.classList.add('bg-otziInk', 'text-otziCream');
+                renderLaminas(btn.dataset.filter);
+            });
+        });
+
+        // Zoom Lightbox para Láminas
+        const zoomModal = document.getElementById('zoomModal');
+        function abrirZoomLamina(id) {
+            const lam = laminasData.find(l => l.id === id);
+            if (!lam) return;
+            document.getElementById('zoomTitle').textContent = lam.titulo;
+            const zoomImg = document.getElementById('zoomImg');
+            zoomImg.src = lam.imagen;
+            zoomImg.alt = lam.titulo;
+            document.getElementById('zoomMeta').textContent = `${lam.id} • ${lam.estiloLabel} • Lámina original del estudio`;
+            document.getElementById('zoomDesc').textContent = lam.descripcion;
+            document.getElementById('zoomCitaBtn').onclick = () => {
+                cerrarZoom();
+                reservarLamina(lam.id);
+            };
+            zoomModal.classList.remove('hidden');
+        }
+        function cerrarZoom() {
+            zoomModal.classList.add('hidden');
+        }
+
+        // Pre-rellenar formulario desde Láminas o Tatuadores
+        const citaForm = document.getElementById('citaForm');
+        const formFeedback = document.getElementById('formFeedback');
+
+        function mostrarFormularioActivo() {
+            formFeedback.classList.add('hidden');
+            citaForm.classList.remove('hidden');
+        }
+
+        function reservarLamina(id) {
+            const lam = laminasData.find(l => l.id === id);
+            if (!lam) return;
+            mostrarFormularioActivo();
+            document.getElementById('tatuajeQuiere').value = `Lámina ${lam.id}: ${lam.titulo}`;
+            document.getElementById('tatuadorDeseado').value = lam.artista;
+            abrirPanel('cita');
+        }
+
+        function citarConTatuador(nombreTatuador) {
+            mostrarFormularioActivo();
+            document.getElementById('tatuadorDeseado').value = nombreTatuador;
+            abrirPanel('cita');
+        }
+
+        // Formulario de Cita
+        citaForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('clienteNombre').value.trim();
+            const telefono = document.getElementById('clienteTelefono').value.trim();
+            const tatuador = document.getElementById('tatuadorDeseado').value;
+            const tatuaje = document.getElementById('tatuajeQuiere').value.trim();
+            const zona = document.getElementById('tattooZona').value.trim();
+            const tamano = document.getElementById('tattooTamano').value.trim();
+            const descripcion = document.getElementById('tattooDescripcion').value.trim();
+
+            const resumen =
+                `Hola ÖTZI Tattoo, quiero solicitar cita:\n` +
+                `• Nombre: ${nombre}\n` +
+                `• Teléfono: ${telefono}\n` +
+                `• Tatuador deseado: ${tatuador}\n` +
+                `• Tatuaje que quiere: ${tatuaje}\n` +
+                `• Zona del cuerpo: ${zona}\n` +
+                `• Tamaño aproximado: ${tamano}\n` +
+                `• Descripción: ${descripcion}`;
+
+            document.getElementById('feedbackSummary').textContent = resumen;
+            document.getElementById('whatsappDirectSend').href = `https://wa.me/34722611224?text=${encodeURIComponent(resumen)}`;
+
+            citaForm.classList.add('hidden');
+            formFeedback.classList.remove('hidden');
+        });
+
+        function resetearFormulario() {
+            citaForm.reset();
+            mostrarFormularioActivo();
+        }
+
+        // Inicializar galería de láminas
+        renderLaminas('all');
+    </script>
+</body>
+</html>
